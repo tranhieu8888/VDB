@@ -1,0 +1,57 @@
+#btn-homefeed {
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: #4284F3;
+    border-bottom: 2px solid #4284F3;
+    font-weight: 500;
+    line-height: 16.94px;
+    padding-bottom: 10px;
+}
+
+#btn-shopfeed {
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: #636363;
+    padding-bottom: 10px;
+}
+
+#text-menuLeft:hover {
+    color: #007bff;
+}
+
+#text-menuLeft {
+    padding: 8px 16px 8px 16px;
+    gap: 8px;
+}
+
+#sub-textmenuLeft {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+}
+
+
+#sub-trangcanhan {
+    display: none !important;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#sub-trangcanhan.show {
+    display: block !important;
+    /* Hiển thị phần tử khi có class 'show' */
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDownFadeIn 0.3s ease;
+
+}
+
+
+.footer {
+    padding: 8px 16px 8px 16px;
+    gap: 4px;
+    margin-top: auto;
+}

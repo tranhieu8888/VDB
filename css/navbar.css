@@ -1,0 +1,16 @@
+
+#header-navbar {
+    gap: 40px;
+}
+
+#search-bar {
+    border: 1px solid #CAD0D7;
+    width: 400px;
+    height: 40px;
+    border-radius: 24px;
+    padding: 8px 12px 8px 40px;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+}

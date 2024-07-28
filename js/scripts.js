@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error('Error loading content:', error);
     });
 });
+
+
+
 // Show Dropdown
 const moreTopic = document.getElementById('more-topic');
 const mainDropdown = document.getElementById('mainDropdown');
@@ -413,8 +416,5 @@ if (managerContribute) {
 
 
 }
-
-
-
 
 

@@ -56,8 +56,125 @@ body {
 }
 
 
+
+/* # Mobile & tablet: width <1024px */
+/* // Mobile & Tablet */
+@media only screen and (max-width: 1023px) {
+
+    #icon-navbar {
+        display: none !important;
+    }
+
+    #sidebar-left {
+        display: none !important;
+
+    }
+
+    #sidebar-right {
+        display: none !important;
+
+    }
+
+    #main-body {
+        position: absolute !important;
+    }
+
+}
+
+/* # Mobie: width < 740px
+// Mobie */
+@media only screen and (max-width: 739px) {
+
+    .navbar {
+        padding: 10px !important;
+    }
+
+    #header-navbar {
+        display: none !important;
+    }
+
+    #navbar-weather {
+        display: none !important;
+    }
+
+    #menu-left-body {
+        display: none !important;
+    }
+
+
+    #main-body {
+        width: 97% !important;
+    }
+
+    #mid-menu-body {
+        width: 100% !important;
+    }
+
+    #groupButton-body-mid {
+        margin-top: 2% !important;
+        flex-direction: column;
+        width: 56% !important;
+        height: 100% !important;
+        align-self: auto !important;
+    }
+
+
+
+
+
+}
+
+/* # Tablet: width >= 740px and width < 1024px
+// Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    #search-navbar {
+        display: none !important;
+    }
+
+    #menu-left-body {
+        display: none !important;
+    }
+
+    #main-body {
+        width: 716px !important;
+    }
+
+    .navbar {
+        padding: 10px !important;
+    }
+}
+
+/* # PC Low
+//PC Low, Ipad Pro */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    #icon-navbar {
+        display: none !important;
+    }
+    #sidebar-right {
+        display: none !important;
+    }
+    #sidebar-left {
+        display: none !important;
+
+    }
+
+}
+
+/* # PC: width >= 1024px
+// Destop */
+@media only screen and (min-width: 1024px) {
+
+    
+
+}
+
+
+
+
+
+
 /* Media query cho thiết bị di động */
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
 
 
     #icon-navbar {
@@ -103,7 +220,6 @@ body {
     }
 
 }
-
 
 .menu-itemfuture {
     width: 200px;
@@ -783,7 +899,7 @@ td {
     display: none !important;
     position: absolute;
     z-index: 9;
-        transform: translate(-80%, -114%);
+    transform: translate(-80%, -114%);
 }
 
 .menu-setting.flex-display {
@@ -822,4 +938,21 @@ td {
 
 .image-link {
     width: fit-content;
+}
+
+.scroll-container {
+    gap: 16px;
+    overflow: hidden; /* Ẩn thanh cuộn */
+    white-space: nowrap; /* Đảm bảo nội dung không bị ngắt dòng */
+    cursor: grab; /* Thay đổi con trỏ khi kéo */
+    position: relative; /* Để xử lý vị trí con trỏ */
+}
+
+.image-users, .full-suggest{
+    transition: transform 0.1s ease; /* Hiệu ứng chuyển đổi mượt mà */
+    will-change: transform;
+}
+
+.item-image, .items-suggest{
+    user-select: none; /* Ngăn chặn chọn văn bản */
 }

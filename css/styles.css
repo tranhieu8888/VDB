@@ -59,7 +59,7 @@ body {
 
 /* # Mobile & tablet: width <1024px */
 /* // Mobile & Tablet */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 
     #icon-navbar {
         display: none !important;
@@ -78,6 +78,10 @@ body {
     #main-body {
         position: absolute !important;
     }
+
+
+
+
 
 }
 
@@ -118,9 +122,39 @@ body {
         align-self: auto !important;
     }
 
+    .menu-setting {
+        left: 120% !important;
+    }
 
+    .contribute {
+        width: 380px !important;
+    }
 
+    .manager-contribute {
+        height: 600px !important;
+        width: 380px !important;
+    }
 
+    .navbar-contribute {
+        flex-direction: column !important;
+    }
+
+    .main-suggest {
+        flex-wrap: wrap !important;
+        flex-direction: column !important;
+        width: 105px !important;
+        height: 120px !important;
+    }
+
+    #suggest-contain {
+        flex: 1 1 calc(33.33% - 10px);
+        /* Đảm bảo mỗi item chiếm 1/3 chiều rộng container trừ khoảng cách giữa các items */
+        box-sizing: border-box;
+    }
+
+    .button-gr-body-mid {
+        width: 200px !important;
+    }
 
 }
 
@@ -142,6 +176,13 @@ body {
     .navbar {
         padding: 10px !important;
     }
+
+    .manager-contribute {
+        height: 900px !important;
+        width: 700px !important;
+    }
+
+
 }
 
 /* # PC Low
@@ -150,52 +191,26 @@ body {
     #icon-navbar {
         display: none !important;
     }
+
     #sidebar-right {
         display: none !important;
     }
+
     #sidebar-left {
         display: none !important;
 
+    }
+
+    .manager-contribute {
+        height: 750px !important;
     }
 
 }
 
 /* # PC: width >= 1024px
 // Destop */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {}
 
-    
-
-}
-
-
-
-
-
-
-/* Media query cho thiết bị di động */
-/* @media (max-width: 1280px) {
-
-
-    #icon-navbar {
-        display: none !important;
-    }
-
-    #sidebar-left {
-        display: none !important;
-
-    }
-
-    #sidebar-right {
-        display: none !important;
-
-    }
-
-    #main-body {
-        position: absolute !important;
-    }
-
-}
 
 
 /* Media query cho thiết bị di động */
@@ -490,6 +505,7 @@ body {
     border-radius: 8px;
     box-shadow: 0px 1px 3px 0px #0000001A;
     height: 1610px;
+    overflow-x: auto;
 }
 
 #mid-menu-body-topic {
@@ -623,7 +639,7 @@ a {
 }
 
 .contribute {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -750,18 +766,24 @@ a {
 
 
 .manager-contribute {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow-x: scroll;
+
     width: 1024px;
+
     height: 1032px;
+
+
     gap: 8px;
     padding: 10px;
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0px 1px 3px 0px #0000001A;
     display: none !important;
+    box-sizing: border-box;
 }
 
 .btn-manager-contribute {
@@ -942,17 +964,26 @@ td {
 
 .scroll-container {
     gap: 16px;
-    overflow: hidden; /* Ẩn thanh cuộn */
-    white-space: nowrap; /* Đảm bảo nội dung không bị ngắt dòng */
-    cursor: grab; /* Thay đổi con trỏ khi kéo */
-    position: relative; /* Để xử lý vị trí con trỏ */
+    overflow: hidden;
+    /* Ẩn thanh cuộn */
+    white-space: nowrap;
+    /* Đảm bảo nội dung không bị ngắt dòng */
+    cursor: grab;
+    /* Thay đổi con trỏ khi kéo */
+    position: relative;
+    /* Để xử lý vị trí con trỏ */
 }
 
-.image-users, .full-suggest{
-    transition: transform 0.1s ease; /* Hiệu ứng chuyển đổi mượt mà */
+.image-users,
+.full-suggest {
+    transition: transform 0.1s ease;
+    /* Hiệu ứng chuyển đổi mượt mà */
     will-change: transform;
 }
 
-.item-image, .items-suggest{
-    user-select: none; /* Ngăn chặn chọn văn bản */
+.item-image,
+.items-suggest {
+    user-select: none;
+    /* Ngăn chặn chọn văn bản */
 }
+

@@ -1,10 +1,3 @@
-function loadContent(file, elementId) {
-  return fetch(file)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById(elementId).innerHTML = data;
-    });
-}
 
 document.addEventListener("DOMContentLoaded", function () {
   loadContent('component/navbar.html', 'top-navbar')
@@ -17,6 +10,21 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         subTrangCanhan.classList.toggle('show');
       });
+
+      const scMenu = document.getElementById('sc-menu');
+      const sidebarLeft = document.getElementById('sidebar-left');
+
+      scMenu.addEventListener('click', function (event2) {
+        if(sidebarLeft.style.display != "none"){
+          sidebarLeft.style.setProperty('display', 'none', 'important');
+
+        } else {
+          sidebarLeft.style.setProperty('display', 'block', 'important');
+
+        }
+      });
+
+      
       // add class active child-icon-navbar
       const child_icon_navbar = document.querySelectorAll('.child-icon-navbar');
       child_icon_navbar.forEach(function (div) {
@@ -35,6 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function loadContent(file, elementId) {
+  return fetch(file)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(elementId).innerHTML = data;
+    });
+}
 
 
 // Show Dropdown
@@ -413,8 +428,7 @@ if (managerContribute) {
 
   // Initial render
   updateItemsPerPage();
-
-
 }
+
 
 

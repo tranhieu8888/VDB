@@ -29,9 +29,9 @@
                         src="icon/search.svg" width="24" height="24" style="position: absolute; left: 12px;" />
                 </div>
                 <span style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #636363;">Hôm nay</span>
-                <div id="tag-history" class="d-flex align-items-center justify-content-between">
+                <div class="tag-history d-flex align-items-center justify-content-between">
 
-                    <span id="text-tag-history">/canvanex</span>
+                    <span class="text-tag-history">/canvanex</span>
 
                     <a href="#"><img src="icon/ic_baseline-more-horiz.svg" width="24" height="24" /></a>
 
@@ -49,8 +49,8 @@
                 <div id="btn-chevon-right" class="d-flex justify-content-center align-items-center">
                     <img src="icon/chevron-right.svg" width="12" height="12" />
                 </div>
-                <div class="d-flex flex-column" style="gap: 24px;">
-                    <div class="d-flex" style="gap: 8px;">
+                <div id="messages" class="d-flex flex-column" style="gap: 24px;">
+                    <!-- <div class="d-flex" style="gap: 8px;">
                         <div class="d-flex align-items-center flex-column" style="gap: 8px;">
                             <div style="width: 58px; height: 24px; gap: 8px; ">
                                 <img style="border: 1px solid var(--Border, #CAD0D7); border-radius: 24px;"
@@ -112,7 +112,7 @@
                             <div class="tidot"></div>
                             <div class="tidot"></div>
                         </div>
-                    </div>
+                    </div> -->
 
                   
                 </div>
@@ -126,51 +126,42 @@
 
                         ">Chủ đề khác</span>
 
-                        <div class="main-suggest d-flex" style="gap: 8px;">
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/book 2.svg" width="20" height="20" />
-                                <span id="text-suggest"> Nhật ký</span>
-                            </div>
+<div class="main-suggest d-flex" style="gap: 8px;">
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/book 2.svg" width="20" height="20" />
+        <span id="text-suggest">Nhật ký</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/hashtag.svg" width="20" height="20" />
-                                <span id="text-suggest">Hashtag</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/hashtag.svg" width="20" height="20" />
+        <span id="text-suggest">Hashtag</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/picture 1 (1).svg" width="20" height="20" />
-                                <span id="text-suggest"> Hình ảnh</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/picture 1 (1).svg" width="20" height="20" />
+        <span id="text-suggest">Hình ảnh</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/reel (1).svg" width="20" height="20" />
-                                <span id="text-suggest"> Video</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/reel (1).svg" width="20" height="20" />
+        <span id="text-suggest">Video</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/trend 1.svg" width="20" height="20" />
-                                <span id="text-suggest"> Xu hướng</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/trend 1.svg" width="20" height="20" />
+        <span id="text-suggest">Xu hướng</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/facebook-page 1 (1).svg" width="20" height="20" />
-                                <span id="text-suggest"> Trang</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/facebook-page 1 (1).svg" width="20" height="20" />
+        <span id="text-suggest">Trang</span>
+    </div>
 
+    <div class="d-flex align-items-center justify-content-center" style="width: 28px; height: 28px; padding: 8px 12px 8px 12px; gap: 8px; border-radius: 8px; background: var(--Gray-Button-BG, #0000000D);">
+        <img style="cursor: pointer;" src="icon/ic_baseline-more-horiz.svg" width="20" height="20" />
+    </div>
+</div>
 
-                            <div class="d-flex align-items-center justify-content-center" style="width: 28px;
-                            height: 28px;
-                            padding: 8px 12px 8px 12px;
-                            gap: 8px;
-                            border-radius: 8px;
-                            background: var(--Gray-Button-BG, #0000000D);
-
-                            ">
-                                <img src="icon/ic_baseline-more-horiz.svg" width="20" height="20" />
-                            </div>
-
-
-                        </div>
                     </div>
                     <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px;">
                         <div class="d-flex flex-column" style="gap: 16px; ">
@@ -1218,13 +1209,20 @@
 
 
 
-                            <div class="d-flex justify-content-between" style="position: relative;">
-                                <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
-                                    id="text-box-midBody" class="d-flex">/canvanex</textarea>
-                                <div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
-                                    <a href="#"><img src="icon/mingcute_send-line.svg" width="20" height="20" /></a>
-                                </div>
-                            </div>
+                            
+	    						<div class="chat-container">
+									<div class="d-flex justify-content-between" style="position: relative;">
+										<textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
+											id="text-box-midBody" class="d-flex">/canvanex</textarea>
+										<div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
+
+											<a href="javascript:void(0);" onclick="sendText()">
+												<img src="icon/mingcute_send-line.svg" width="20" height="20" />
+											</a>
+										</div>
+									</div>
+
+								</div>
                         </div>
                     </div>
 

@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/sidebar-left.css" />
     <link rel="stylesheet" href="/css/sidebar-right.css" />
+
+    <!-- Fancybox CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<!-- jQuery (Cần thiết cho Fancybox) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Fancybox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 </head>
 
 <body>
@@ -51,7 +61,7 @@
                     <img src="icon/chevron-right.svg" width="12" height="12" />
                 </div>
 
-                <div class="d-flex flex-column" style="gap: 24px;">
+                <div id="messages" class="d-flex flex-column" style="gap: 24px;">
                     <div class="d-flex" style="gap: 8px;">
                         <div class="d-flex align-items-center flex-column" style="gap: 8px;">
                             <div style="width: 58px; height: 24px; gap: 8px; ">
@@ -196,51 +206,41 @@
 
                         ">Chủ đề khác</span>
 
-                        <div class="main-suggest d-flex" style="gap: 8px;">
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/book 2.svg" width="20" height="20" />
-                                <span id="text-suggest"> Nhật ký</span>
-                            </div>
+<div class="main-suggest d-flex" style="gap: 8px;">
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/book 2.svg" width="20" height="20" />
+        <span id="text-suggest">Nhật ký</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/hashtag.svg" width="20" height="20" />
-                                <span id="text-suggest">Hashtag</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/hashtag.svg" width="20" height="20" />
+        <span id="text-suggest">Hashtag</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/picture 1 (1).svg" width="20" height="20" />
-                                <span id="text-suggest"> Hình ảnh</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/picture 1 (1).svg" width="20" height="20" />
+        <span id="text-suggest">Hình ảnh</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/reel (1).svg" width="20" height="20" />
-                                <span id="text-suggest"> Video</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/reel (1).svg" width="20" height="20" />
+        <span id="text-suggest">Video</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/trend 1.svg" width="20" height="20" />
-                                <span id="text-suggest"> Xu hướng</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/trend 1.svg" width="20" height="20" />
+        <span id="text-suggest">Xu hướng</span>
+    </div>
 
-                            <div id="suggest-contain" class="d-flex align-items-center">
-                                <img src="icon/facebook-page 1 (1).svg" width="20" height="20" />
-                                <span id="text-suggest"> Trang</span>
-                            </div>
+    <div id="suggest-contain" class="suggest-container d-flex align-items-center">
+        <img src="icon/facebook-page 1 (1).svg" width="20" height="20" />
+        <span id="text-suggest">Trang</span>
+    </div>
 
-
-                            <div class="d-flex align-items-center justify-content-center" style="width: 28px;
-                            height: 28px;
-                            padding: 8px 12px 8px 12px;
-                            gap: 8px;
-                            border-radius: 8px;
-                            background: var(--Gray-Button-BG, #0000000D);
-
-                            ">
-                                <img src="icon/ic_baseline-more-horiz.svg" width="20" height="20" />
-                            </div>
-
-
-                        </div>
+    <div class="d-flex align-items-center justify-content-center" style="width: 28px; height: 28px; padding: 8px 12px 8px 12px; gap: 8px; border-radius: 8px; background: var(--Gray-Button-BG, #0000000D);">
+        <img style="cursor: pointer;" src="icon/ic_baseline-more-horiz.svg" width="20" height="20" />
+    </div>
+</div>
                     </div>
                     <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px;">
                         <div class="d-flex flex-column" style="gap: 16px; ">
@@ -1287,12 +1287,18 @@
 
 
 
-                            <div class="d-flex justify-content-between" style="position: relative;">
-                                <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
-                                    id="text-box-midBody" class="d-flex">/canvanex</textarea>
-                                <div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
-                                    <a href="#"><img src="icon/mingcute_send-line.svg" width="20" height="20" /></a>
+                            <div class="chat-container">
+                                <div class="d-flex justify-content-between" style="position: relative;">
+                                    <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
+                                        id="text-box-midBody" class="d-flex">/canvanex</textarea>
+                                    <div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
+
+                                        <a href="javascript:void(0);" onclick="sendText()">
+                                            <img src="icon/mingcute_send-line.svg" width="20" height="20" />
+                                        </a>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

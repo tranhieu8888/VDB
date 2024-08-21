@@ -11,11 +11,31 @@ document.addEventListener("DOMContentLoaded", function () {
         subTrangCanhan.classList.toggle('show');
       });
 
+      document.querySelectorAll('.text-mmenu-left').forEach(item => {
+        item.addEventListener('click', function () {
+          // Loại bỏ class 'active' khỏi tất cả các div
+          document.querySelectorAll('.text-mmenu-left').forEach(box => box.classList.remove('active'));
+
+          // Thêm class 'active' cho thẻ div được click
+          this.classList.add('active');
+        });
+      });
+
+      document.querySelectorAll('.textSub-menu').forEach(item => {
+        item.addEventListener('click', function () {
+          // Loại bỏ class 'active' khỏi tất cả các div
+          document.querySelectorAll('.textSub-menu').forEach(box => box.classList.remove('active'));
+
+          // Thêm class 'active' cho thẻ div được click
+          this.classList.add('active');
+        });
+      });
+
       const scMenu = document.getElementById('sc-menu');
       const sidebarLeft = document.getElementById('sidebar-left');
 
       scMenu.addEventListener('click', function (event2) {
-        if(sidebarLeft.style.display != "none"){
+        if (sidebarLeft.style.display != "none") {
           sidebarLeft.style.setProperty('display', 'none', 'important');
 
         } else {
@@ -24,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      
+
       // add class active child-icon-navbar
       const child_icon_navbar = document.querySelectorAll('.child-icon-navbar');
       child_icon_navbar.forEach(function (div) {
@@ -432,3 +452,150 @@ if (managerContribute) {
 
 
 
+
+
+
+//AI Typping
+function sendText() {
+  const text = document.getElementById("text-box-midBody").value.trim();
+  if (text) {
+    const messagesDiv = document.getElementById("messages");
+
+    // Thêm tin nhắn của người dùng
+    const userMessage = createMessageContainer('user', 'icon/Profile.svg', 'Bạn', text);
+    messagesDiv.appendChild(userMessage);
+    document.getElementById("text-box-midBody").value = ''; // Xóa nội dung textarea
+
+    // Tự động cuộn xuống để hiển thị tin nhắn mới
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+    // Giả lập phản hồi từ AI với hiệu ứng in ra từ từ và thêm hình ảnh hoặc video nếu có
+    setTimeout(() => {
+      const aiResponse = {
+        text: "Đây là phản hồi từ AI. Nó sẽ xuất hiện từng ký tự một.",
+        media: {
+          type: 'image', // 'image' hoặc 'video'
+          src: 'icon/image 1820.svg' // Đường dẫn đến ảnh hoặc video
+        }
+      };
+      const aiMessage = createMessageContainer('ai', 'icon/image 1.svg', 'VDB AI', '');
+      messagesDiv.appendChild(aiMessage);
+      typeEffect(aiMessage.querySelector('.message-content'), aiResponse.text, () => {
+        if (aiResponse.media) {
+          addMedia(aiMessage.querySelector('.message-content'), aiResponse.media);
+        }
+      });
+
+      // Thêm phần tử cảm xúc vào tin nhắn AI
+      const feelingContainer = document.createElement('div');
+      feelingContainer.className = 'feeling-container';
+      feelingContainer.innerHTML = `
+              <div class="d-flex" style="gap: 8px;">
+                  <img id="feeling-icon" src="icon/ant-design_heart-outlined.svg" width="16" height="16" />
+                  <img id="feeling-icon" src="icon/solar_medal-ribbon-star-linear.svg" width="16" height="16" />
+                  <img id="feeling-icon" src="icon/iconamoon_comment.svg" width="16" height="16" />
+                  <img id="feeling-icon" src="icon/mingcute_share-forward-line.svg" width="16" height="16" />
+              </div>
+          `;
+      aiMessage.appendChild(feelingContainer);
+
+      // Tự động cuộn xuống để hiển thị tin nhắn mới
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }, 1000); // Thay đổi thời gian để phản hồi AI xuất hiện
+  }
+}
+
+function createMessageContainer(type, avatarSrc, name, messageText) {
+  const container = document.createElement('div');
+  container.className = `message ${type}-message`;
+
+  const headerContainer = document.createElement('div');
+  headerContainer.className = 'message-header-container';
+
+  const avatar = document.createElement('img');
+  avatar.src = avatarSrc;
+  avatar.width = 24;
+  avatar.height = 24;
+  avatar.alt = `${name} Avatar`;
+
+  const header = document.createElement('span');
+  header.className = 'message-header';
+  header.textContent = name;
+
+  headerContainer.appendChild(avatar);
+  headerContainer.appendChild(header);
+
+  const content = document.createElement('div');
+  content.className = 'message-content';
+  content.textContent = messageText;
+
+  container.appendChild(headerContainer);
+  container.appendChild(content);
+
+  return container;
+}
+
+function typeEffect(element, text, callback, speed = 5) {
+  let index = 0;
+  element.textContent = '';
+
+  function type() {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, speed);
+    } else if (callback) {
+      callback();
+    }
+  }
+
+  type();
+}
+
+function addMedia(container, media) {
+  let mediaElement;
+  if (media.type === 'image') {
+    mediaElement = document.createElement('a');
+    mediaElement.href = media.src;
+    mediaElement.dataset.fancybox = 'gallery';
+    mediaElement.className = 'image-link';
+
+    const img = document.createElement('img');
+    img.src = media.src;
+    img.width = 300;
+    img.height = 225;
+
+    mediaElement.appendChild(img);
+  } else if (media.type === 'video') {
+    mediaElement = document.createElement('a');
+    mediaElement.href = media.src;
+    mediaElement.dataset.fancybox = 'gallery';
+
+    const video = document.createElement('video');
+    video.width = 300;
+    video.height = 225;
+    video.controls = true;
+
+    const source = document.createElement('source');
+    source.src = media.src;
+    source.type = 'video/mp4';
+
+    video.appendChild(source);
+    mediaElement.appendChild(video);
+  }
+
+  if (mediaElement) {
+    container.appendChild(mediaElement);
+  }
+}
+
+$(document).ready(function () {
+  $('[data-fancybox="gallery"]').fancybox({
+    // Các tùy chọn Fancybox có thể được cấu hình tại đây
+    buttons: [
+      'slideShow',
+      'thumbs',
+      'close'
+    ]
+  });
+});

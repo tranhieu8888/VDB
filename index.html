@@ -15,11 +15,11 @@
 
 </head>
 
-<body onload="init()">
+<body>
     <div class="overlay" id="overlay"></div> <!-- Phần tử overlay -->
     <!-- top-navbar -->
     <div id="top-navbar">
-
+        
     </div>
     <!-- end-topnavbar -->
 
@@ -151,7 +151,7 @@
 
                                 </div>
 
-                                <div class="d-flex align-items-center" style="gap: 8px; height: 32px;">
+                                <div class="d-flex align-items-center" style="gap: 8px; height: 38px;">
                                     <span
                                         style="width: 87px; height: 17px; font-weight: 400; font-size: 14px; line-height: 16.94px; color: #1f1f1f;">Gợi
                                         ý chủ đề:</span>
@@ -206,18 +206,15 @@
                             </div>
                         </div>
 
-                        <div class="d-flex flex-column" style="gap: 8px;">
-                            <span
-                                style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #4284F3;">/timlietsi</span>
-                            <span
-                                style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #4284F3;">/timnhanthan</span>
-                            <span
-                                style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #4284F3;">/timtrelac</span>
-                            <span
-                                style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #4284F3;">/timmolietsi</span>
-                            <span
-                                style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #4284F3;">/timdongdoithatlac</span>
+                        <div class="container">
+                            <span class="hover-text">/timlietsi</span>
+                            <span class="hover-text">/timnhanthan</span>
+                            <span class="hover-text">/timtrelac</span>
+                            <span class="hover-text">/timmolietsi</span>
+                            <span class="hover-text">/timdongdoithatlac</span>
                         </div>
+                        
+                        
                     </div>
 
                     <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px;">
@@ -1337,13 +1334,19 @@
 
 
 
-                            <div class="d-flex justify-content-between" style="position: relative;">
-                                <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
-                                    id="text-box-midBody" class="d-flex">/canvanex</textarea>
-                                <div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
-                                    <a href="#"><img src="icon/mingcute_send-line.svg" width="20" height="20" /></a>
+                                <div class="d-flex justify-content-between" style="position: relative;">
+                                    <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
+                                        id="text-box-midBody" class="d-flex">/canvanex</textarea>
+                                    <div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
+                                        <a href="#"><img src="icon/mingcute_send-line.svg" width="20" height="20" /></a>
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="output" id="output"></div>
+
+
+
+                            
                         </div>
                     </div>
 
@@ -1363,7 +1366,7 @@
 
 
 
-    <script>
+    <!-- <script>
         function loadContent(files, elementIds) {
             files.forEach((file, index) => {
                 var xhr = new XMLHttpRequest();
@@ -1382,7 +1385,7 @@
             var elementIds = ['top-navbar', 'sidebar-left', 'sidebar-right']; // Danh sách các phần tử tương ứng
             loadContent(files, elementIds);
         }
-    </script>
+    </script> -->
 
 
     <script>

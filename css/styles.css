@@ -497,6 +497,7 @@ body {
     border-radius: 8px;
     box-shadow: 0px 1px 3px 0px #0000001A;
     width: 100%;
+    height: 100vh;
 }
 
 #mid-menu-body-multiResults {
@@ -987,3 +988,132 @@ td {
     /* Ngăn chặn chọn văn bản */
 }
 
+.menu-itemfuture.active {
+    background-color: #3498DB33;
+}
+
+.child-items-suggest.active {
+    background-color: #3498DB33;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hover-text {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.94px;
+    color: #4284F3;
+    cursor: default;
+    /* Con trỏ mặc định */
+    padding: 0 2px;
+    /* Đảm bảo không gian cho văn bản */
+}
+
+.hover-text::before,
+.hover-text::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    /* Không chiếm không gian thực */
+}
+
+.hover-text:hover {
+    cursor: pointer;
+    /* Khi di chuột lên chính văn bản */
+}
+
+.suggest-container:hover {
+    background-color: #3498DB33 !important;
+
+}
+
+.button-gr-body-mid:hover {
+    background-color: #3498DB33;
+
+}
+
+a:hover #text-menuLeft {
+    transform: scale(1.05);
+    /* Tăng kích thước của div nhẹ khi hover */
+    transition: transform 0.3s ease;
+    /* Thời gian chuyển đổi cho hiệu ứng */
+    background-color: #3498DB33;
+}
+
+.child-items-suggest:hover {
+    background-color: #3498DB33;
+
+}
+
+.menu-itemfuture:hover {
+    background-color: #3498DB33;
+}
+
+.text-mmenu-left.active {
+    background-color: #3498DB33;
+
+}
+
+.textSub-menu.active {
+    background-color: #3498DB33;
+
+}
+
+a:hover #textSub-menuleft {
+    transform: scale(1.05);
+    /* Tăng kích thước của div nhẹ khi hover */
+    transition: transform 0.3s ease;
+    /* Thời gian chuyển đổi cho hiệu ứng */
+    background-color: #3498DB33;
+}
+
+.message-content {
+    max-width: 100%;
+}
+
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-header-container {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 24px;
+    gap: 8px;
+}
+
+.message-header-container img {
+    border: 1px solid var(--Border, #CAD0D7);
+    border-radius: 24px;
+}
+
+.message-header-container span {
+    height: 17px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.94px;
+    text-align: center;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+}
+
+.message-content img {
+    width: 300px;
+    height: 225px;
+}

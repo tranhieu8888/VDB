@@ -89,6 +89,10 @@ body {
 // Mobie */
 @media only screen and (max-width: 739px) {
 
+    #main-body-multiResults {
+        width: 97% !important;
+    }
+
     .navbar {
         padding: 10px !important;
     }
@@ -255,6 +259,7 @@ body {
     background-color: #ffffff;
     box-shadow: 0px 1px 3px 0px #0000001A;
     cursor: pointer;
+    justify-content: center;
 }
 
 .child-icon-navbar {
@@ -629,7 +634,7 @@ body {
 }
 
 
-#text-tag-history {
+.text-tag-history {
     font-size: 14px;
     font-weight: 400;
     line-height: 16.94px;
@@ -975,15 +980,13 @@ td {
     /* Để xử lý vị trí con trỏ */
 }
 
-.image-users,
-.full-suggest {
+.image-users {
     transition: transform 0.1s ease;
     /* Hiệu ứng chuyển đổi mượt mà */
     will-change: transform;
 }
 
-.item-image,
-.items-suggest {
+.item-image {
     user-select: none;
     /* Ngăn chặn chọn văn bản */
 }
@@ -1116,4 +1119,45 @@ a:hover #textSub-menuleft {
 .message-content img {
     width: 300px;
     height: 225px;
+}
+
+.owl-carousel {
+    display: flex;
+    overflow: hidden;
+    /* Ẩn khoảng trắng dư thừa */
+}
+
+.owl-stage {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Đảm bảo không có gãy dòng */
+}
+
+.owl-item {
+    flex: 0 0 auto;
+    /* Đảm bảo các item không thay đổi kích thước */
+    margin-right: 8px;
+    /* Khoảng cách giữa các item */
+    box-sizing: border-box;
+    /* Đảm bảo padding và border không ảnh hưởng đến kích thước */
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow: hidden;
+    /* Ẩn khoảng trắng dư thừa */
+}
+
+
+.owl-carousel.owl-loaded {
+    display: flex !important;
+    height: 34px;
+}
+
+.btn-setting:hover {
+    background-color: #3498DB33;
+
+}
+
+.btn-manager-contribute:hover {
+    background-color: #3498DB33;
 }

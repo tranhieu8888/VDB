@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/sidebar-right.css">
 
 
+    <!-- Thêm link đến stylesheet của Owl Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
 </head>
 
 <body>
@@ -115,7 +119,7 @@
 
                 <div>
 
-                    <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px;">
+                    <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px; margin-top: 12px;">
                         <div class="d-flex">
                             <div class="scroll-container d-flex flex-column" style="gap: 8px;">
                                 <div class="image-users d-flex" style="gap: 16px;">
@@ -155,52 +159,49 @@
                                     <span
                                         style="width: 87px; height: 17px; font-weight: 400; font-size: 14px; line-height: 16.94px; color: #1f1f1f;">Gợi
                                         ý chủ đề:</span>
-                                    <div class="full-suggest d-flex" style="gap: 8px;">
-                                        <div class="items-suggest d-flex" style="gap: 8px;">
-                                            <div class="child-items-suggest d-flex align-items-center">
-                                                <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                <span
-                                                    style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Du
-                                                    lịch</span>
+                                        <div class="owl-carousel">
+                                            <div class="full-suggest d-flex">
+                                                <div class="items-suggest d-flex" style="gap: 8px;">
+                                                    <div class="child-items-suggest d-flex align-items-center">
+                                                        <img src="icon/luggage 1.svg" width="20" height="20" />
+                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Du lịch</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="full-suggest d-flex">
+                                                <div class="items-suggest d-flex" style="gap: 8px;">
+                                                    <div class="child-items-suggest d-flex align-items-center">
+                                                        <img src="icon/luggage 1.svg" width="20" height="20" />
+                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Ẩm thực</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="full-suggest d-flex">
+                                                <div class="items-suggest d-flex" style="gap: 8px;">
+                                                    <div class="child-items-suggest d-flex align-items-center">
+                                                        <img src="icon/luggage 1.svg" width="20" height="20" />
+                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Công nghệ</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="full-suggest d-flex">
+                                                <div class="items-suggest d-flex" style="gap: 8px;">
+                                                    <div class="child-items-suggest d-flex align-items-center">
+                                                        <img src="icon/luggage 1.svg" width="20" height="20" />
+                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Thời trang</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="full-suggest d-flex">
+                                                <div class="items-suggest d-flex" style="gap: 8px;">
+                                                    <div class="child-items-suggest d-flex align-items-center">
+                                                        <img src="icon/luggage 1.svg" width="20" height="20" />
+                                                        <span style=" font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Thể thao</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="items-suggest d-flex" style="gap: 8px;">
-                                            <div class="child-items-suggest d-flex align-items-center">
-                                                <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                <span
-                                                    style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Ẩm
-                                                    thực</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="items-suggest d-flex" style="gap: 8px;">
-                                            <div class="child-items-suggest d-flex align-items-center">
-                                                <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                <span
-                                                    style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Công
-                                                    nghệ</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="items-suggest d-flex" style="gap: 8px;">
-                                            <div class="child-items-suggest d-flex align-items-center">
-                                                <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                <span
-                                                    style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Thời
-                                                    trang</span>
-                                            </div>
-                                        </div>
-                                        <div class="items-suggest d-flex" style="gap: 8px;">
-                                            <div class="child-items-suggest d-flex align-items-center">
-                                                <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                <span
-                                                    style=" font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Thể
-                                                    thao</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
+                                        
 
                                 </div>
                             </div>
@@ -247,12 +248,12 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="d-flex btn-share align-items-center" style="cursor: pointer;">
+                                        <div class="btn-setting d-flex btn-share align-items-center" style="cursor: pointer;">
                                             <img src="icon/fluent_share-28-filled.svg" width="20" height="20" />
                                             <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Chia
                                                 sẻ cuộc trò chuyện</span>
                                         </div>
-                                        <div class="d-flex btn-magic align-items-center" style="cursor: pointer;">
+                                        <div class="btn-setting d-flex btn-magic align-items-center" style="cursor: pointer;">
                                             <img src="icon/fa-solid_magic.svg" width="20" height="20" />
                                             <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Cá
                                                 nhân hoá trợ lý AI</span>
@@ -1329,11 +1330,6 @@
                                 <button class="btn-xacnhan-contribute">Xác nhận</button>
                             </div>
 
-
-
-
-
-
                                 <div class="d-flex justify-content-between" style="position: relative;">
                                     <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
                                         id="text-box-midBody" class="d-flex">/canvanex</textarea>
@@ -1344,9 +1340,6 @@
 
                                 <div class="output" id="output"></div>
 
-
-
-                            
                         </div>
                     </div>
 
@@ -1364,40 +1357,15 @@
 
     </div>
 
-
-
-    <!-- <script>
-        function loadContent(files, elementIds) {
-            files.forEach((file, index) => {
-                var xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        document.getElementById(elementIds[index]).innerHTML = xhr.responseText;
-                    }
-                };
-                xhr.open("GET", file, true);
-                xhr.send();
-            });
-        }
-
-        function init() {
-            var files = ['component/navbar.html', 'component/sidebar-left.html', 'component/sidebar-right.html']; // Danh sách các file cần load
-            var elementIds = ['top-navbar', 'sidebar-left', 'sidebar-right']; // Danh sách các phần tử tương ứng
-            loadContent(files, elementIds);
-        }
-    </script> -->
-
-
     <script>
  const container = document.querySelector('.scroll-container');
 const items = document.querySelector('.image-users');
-const fullSuggest = document.querySelector('.full-suggest');
 let isDragging = false;
 let draggedElement = null;
 let startX, scrollLeft, currentX;
 
 // Ngăn chặn hành động kéo mặc định của ảnh trong items và full-suggest
-const draggableElements = document.querySelectorAll('.item-image, .items-suggest');
+const draggableElements = document.querySelectorAll('.item-image');
 draggableElements.forEach(el => {
     if (el.tagName.toLowerCase() === 'img') {
         el.setAttribute('draggable', false);
@@ -1408,7 +1376,7 @@ draggableElements.forEach(el => {
 const startDragging = (e) => {
     isDragging = true;
     startX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
-    draggedElement = e.target.closest('.image-users, .full-suggest');
+    draggedElement = e.target.closest('.image-users');
     if (draggedElement) {
         const transformValue = draggedElement.style.transform;
         scrollLeft = transformValue ? parseFloat(transformValue.split('(')[1].split(',')[0]) : 0;
@@ -1459,7 +1427,51 @@ function constrainPosition() {
 }
 
 
+
+
+
     </script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Khởi tạo Owl Carousel -->
+<script>
+    $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                margin: 8,
+                autoWidth: true,
+                autoplaySpeed: 800,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                },
+                smartSpeed: 600,
+                responsiveRefreshRate: 100,
+            });
+
+            // Xử lý khoảng trắng dư thừa
+            $(".owl-carousel").on('translated.owl.carousel', function(event) {
+                var owlStage = $('.owl-stage');
+                var owlStageWidth = owlStage.width();
+                var owlCarouselWidth = $('.owl-carousel').width();
+
+                if (owlStageWidth < owlCarouselWidth) {
+                    owlStage.css('width', owlCarouselWidth + 'px');
+                }
+            });
+        });
+
+</script>
+
 
     <script src="js/scripts.js"></script>
     <!-- Bootstrap JS Bundle with Popper -->

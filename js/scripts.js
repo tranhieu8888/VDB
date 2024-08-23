@@ -315,6 +315,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
 const managerContribute = document.querySelector(".manager-contribute");
 
 if (managerContribute) {

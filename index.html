@@ -106,7 +106,7 @@
                         <div class="d-flex flex-column" class="mid-bottom-body">
                             <div class="d-flex">
                                 <div class="scroll-container d-flex flex-column" style="gap: 8px;">
-                                    <div class="image-users d-flex" style="gap: 16px;">
+                                    <div class="owl-carousel owl-theme image-users d-flex">
                                         <div><img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" /></div>
                                         <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
                                         <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
@@ -1004,77 +1004,6 @@
             </div>
             <!-- end-body-main -->
         </div>
-
-        <script>
-            const container = document.querySelector(".scroll-container");
-            const items = document.querySelector(".image-users");
-            let isDragging = false;
-            let draggedElement = null;
-            let startX, scrollLeft, currentX;
-
-            // Ngăn chặn hành động kéo mặc định của ảnh trong items và full-suggest
-            const draggableElements = document.querySelectorAll(".item-image");
-            draggableElements.forEach((el) => {
-                if (el.tagName.toLowerCase() === "img") {
-                    el.setAttribute("draggable", false);
-                }
-                el.addEventListener("dragstart", (e) => e.preventDefault());
-            });
-
-            const startDragging = (e) => {
-                isDragging = true;
-                startX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
-                draggedElement = e.target.closest(".image-users");
-                if (draggedElement) {
-                    const transformValue = draggedElement.style.transform;
-                    scrollLeft = transformValue ? parseFloat(transformValue.split("(")[1].split(",")[0]) : 0;
-                }
-            };
-
-            const stopDragging = () => {
-                if (isDragging) {
-                    isDragging = false;
-                    constrainPosition();
-                }
-            };
-
-            const onDragging = (e) => {
-                if (!isDragging || !draggedElement) return;
-                e.preventDefault();
-                currentX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
-                const walk = (currentX - startX) * 1; // Số lượng kéo
-                draggedElement.style.transform = `translate3d(${scrollLeft + walk}px, 0, 0)`;
-            };
-
-            container.addEventListener("mousedown", startDragging);
-            container.addEventListener("touchstart", startDragging);
-
-            container.addEventListener("mouseleave", stopDragging);
-            container.addEventListener("mouseup", stopDragging);
-            container.addEventListener("touchend", stopDragging);
-
-            container.addEventListener("mousemove", onDragging);
-            container.addEventListener("touchmove", onDragging);
-
-            function constrainPosition() {
-                if (!draggedElement) return;
-
-                // Tính toán giá trị dịch chuyển
-                let transformValue = draggedElement.style.transform;
-                let translateX = transformValue ? parseFloat(transformValue.split("(")[1].split(",")[0]) : 0;
-                const maxTranslateX = -(draggedElement.scrollWidth - container.offsetWidth);
-
-                // Giới hạn giá trị dịch chuyển
-                if (translateX > 0) {
-                    translateX = 0;
-                } else if (translateX < maxTranslateX) {
-                    translateX = maxTranslateX;
-                }
-
-                draggedElement.style.transform = `translate3d(${translateX}px, 0, 0)`;
-            }
-        </script>
-
         <!-- jQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- Owl Carousel JS -->
@@ -1086,6 +1015,7 @@
                     margin: 8,
                     autoWidth: true,
                     autoplaySpeed: 800,
+                    dots: false,
                     responsive: {
                         0: {
                             items: 1,

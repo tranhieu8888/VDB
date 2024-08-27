@@ -916,11 +916,14 @@ td {
     transition: transform 0.1s ease;
     /* Hiệu ứng chuyển đổi mượt mà */
     will-change: transform;
+    gap: 16px;
+    height: 100% !important;
 }
 
 .item-image {
     user-select: none;
     border-radius: 8px;
+    margin-right: 5px;
     /* Ngăn chặn chọn văn bản */
 }
 

@@ -126,6 +126,7 @@ if (btnChevon) {
 if (btn_chevon_right) {
   btn_chevon_right.addEventListener("click", function () {
       menuLeftBody.classList.remove("menu-hidden"); // Nếu có thì xóa lớp để hiển thị menu
+      mid_menu_body.style.setProperty("width", "716px", "important");
       btn_chevon_right.style.setProperty("display", "none", "important");
   });
 }

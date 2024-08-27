@@ -1,170 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Header Design</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="css/navbar.css" />
+        <link rel="stylesheet" href="css/sidebar-left.css" />
+        <link rel="stylesheet" href="css/sidebar-right.css" />
+        <!-- Thêm link đến stylesheet của Owl Carousel -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+        <!-- Fancybox CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+        <!-- jQuery (Cần thiết cho Fancybox) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Fancybox JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Header Design</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/sidebar-left.css">
-    <link rel="stylesheet" href="css/sidebar-right.css">
+    <body>
+        <div class="overlay" id="overlay"></div>
+        <!-- Phần tử overlay -->
+        <!-- top-navbar -->
+        <div id="top-navbar"></div>
+        <!-- end-topnavbar -->
 
+        <!-- side-barleft -->
+        <div class="d-flex justify-content-around" id="full-body">
+            <div class="d-flex flex-column" id="sidebar-left"></div>
+            <!-- end-sidebar-left -->
 
-    <!-- Thêm link đến stylesheet của Owl Carousel -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+            <!-- sidebar-right -->
+            <div class="d-flex justify-content-between flex-column" id="sidebar-right"></div>
+            <!-- end-sidebar-right -->
 
-</head>
-
-<body>
-    <div class="overlay" id="overlay"></div> <!-- Phần tử overlay -->
-    <!-- top-navbar -->
-    <div id="top-navbar">
-        
-    </div>
-    <!-- end-topnavbar -->
-
-    <!-- side-barleft -->
-    <div class="d-flex justify-content-around" id="full-body">
-        <div class="d-flex flex-column" id="sidebar-left">
-
-        </div>
-        <!-- end-sidebar-left -->
-
-        <!-- sidebar-right -->
-        <div class="d-flex justify-content-between flex-column" id="sidebar-right">
-
-        </div>
-        <!-- end-sidebar-right -->
-
-
-
-        <!-- body-main -->
-        <div class="d-flex" id="main-body">
-            <div id="menu-left-body" class="d-flex flex-column"
-                style="width: 300px; height: 400px; border-radius: 8px;border-width: 0px 1px 0px 0px; padding: 24px 16px 24px 16px; gap: 16px;background-color: #ffffff; box-shadow: 0px 1px 3px 0px #0000001A;">
-                <div class="d-flex justify-content-between" id="title-body-leftMenu" style="width: 100%;">
-                    <span
-                        style="width: 56px; height: 19px;;font-weight: 600; font-size: 16px; line-height: 19.36px; color: #1f1f1f;">Lịch
-                        sử</span>
-                    <img style="cursor: pointer;" src="icon/Edit Square.svg" width="20" height="20" />
-                </div>
-
-                <div class="d-flex align-items-center" style="position: relative;">
-                    <input id="search-bar-body-leftMenu" type="text" placeholder="Tìm kiếm..." />
-                    <img src="icon/search.svg" width="24" height="24" style="position: absolute; left: 12px;" />
-                </div>
-
-                <span style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #636363;">Hôm nay</span>
-
-                <div class="d-flex flex-column align-items-center" style="gap: 8px;">
-                    <img src="icon/speech-bubble 1.svg" width="100" height="100" />
-                    <span
-                        style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center; color: #636363;">
-                        Chưa có cuộc trò chuyện nào.<br />
-                        Hãy bắt đầu ngay nhé!
-                    </span>
-                </div>
-                <div id="btn-chevon" class="d-flex justify-content-center align-items-center" style="cursor: pointer;">
-                    <img src="icon/chevron-left.svg" width="12" height="12" />
-                </div>
-            </div>
-
-            <div id="mid-menu-body" class="mid-menu-body d-flex justify-content-between flex-column mx-auto"
-                style="padding: 24px 16px 24px 16px; background-color: #ffffff; border-radius: 8px; box-shadow: 0px 1px 3px 0px #0000001A; width: 716px;">
-
-                <div id="btn-chevon-right" class="d-flex justify-content-center align-items-center">
-                    <img src="icon/chevron-right.svg" width="12" height="12" />
-                </div>
-
-                <div class="d-flex flex-column" id="mid-top-body" style="gap: 24px;">
-                    <div class="d-flex" id="title-mid-top-body" style="gap: 8px;">
-                        <div class="d-flex" style="gap: 4px;">
-                            <span
-                                style="font-weight: 600; font-size: 24px; line-height: 29.05px; text-align: center; color: #1f1f1f;">Chào
-                                Hoàng,</span>
-                            <img src="icon/image 1805.svg" width="32" height="32" />
-                        </div>
+            <!-- body-main -->
+            <div class="d-flex" id="main-body">
+                <div id="menu-left-body" class="d-flex flex-column">
+                    <div class="d-flex justify-content-between" id="title-body-leftMenu" style="width: 100%;">
+                        <span class="title-text">Lịch sử</span>
+                        <img style="cursor: pointer;" src="icon/Edit Square.svg" width="20" height="20" />
                     </div>
 
-                    <div class="menu-future d-flex" style="gap: 12px; flex-wrap: wrap;">
-                        <div class="menu-itemfuture d-flex align-items-center">
-                            <img style="border-radius: 8px;" src="icon/magic 1.svg" width="32" height="32" />
-                            <span style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1F1F1F;">Tìm
-                                kiếm với AI</span>
-                        </div>
+                    <div class="d-flex align-items-center" style="position: relative;">
+                        <input id="search-bar-body-leftMenu" type="text" placeholder="Tìm kiếm..." />
+                        <img src="icon/search.svg" width="24" height="24" style="position: absolute; left: 12px;" />
+                    </div>
 
-                        <div class="menu-itemfuture d-flex align-items-center">
-                            <img style="border-radius: 8px;" src="icon/inbox 1.svg" width="32" height="32" />
-                            <span style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1F1F1F;">Tải
-                                tệp lên</span>
-                        </div>
+                    <span class="title-today">Hôm nay</span>
 
-                        <div class="menu-itemfuture d-flex align-items-center">
-                            <img style="border-radius: 8px;" src="icon/feather-pen 1.svg" width="32" height="32" />
-                            <span style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1F1F1F;">Viết
-                                nội dung</span>
-                        </div>
-
-                        <div class="menu-itemfuture d-flex align-items-center">
-                            <img style="border-radius: 8px;" src="icon/mandala 1.svg" width="32" height="32" />
-                            <span style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1F1F1F;">Sáng
-                                tạo nghệ thuật</span>
-                        </div>
+                    <div class="d-flex flex-column align-items-center" style="gap: 8px;">
+                        <img src="icon/speech-bubble 1.svg" width="100" height="100" />
+                        <span class="title-today" style="text-align: center;">
+                            Chưa có cuộc trò chuyện nào.<br />
+                            Hãy bắt đầu ngay nhé!
+                        </span>
+                    </div>
+                    <div id="btn-chevon" class="d-flex justify-content-center align-items-center" style="cursor: pointer;">
+                        <img src="icon/chevron-left.svg" width="12" height="12" />
                     </div>
                 </div>
 
-                <div>
+                <div id="mid-menu-body" class="mid-menu-body d-flex justify-content-between flex-column mx-auto" style="width: 716px;">
+                    <div id="btn-chevon-right" class="d-flex justify-content-center align-items-center">
+                        <img src="icon/chevron-right.svg" width="12" height="12" />
+                    </div>
 
-                    <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px; margin-top: 12px;">
-                        <div class="d-flex">
-                            <div class="scroll-container d-flex flex-column" style="gap: 8px;">
-                                <div class="image-users d-flex" style="gap: 16px;">
-                                    <div><img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                            width="40" height="40" draggable="false" /></div>
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
-                                    <img class="item-image" style="border-radius: 8px;" src="icon/image 1801.svg"
-                                        width="40" height="40" draggable="false" />
+                    <div class="d-flex flex-column" id="mid-top-body">
+                        <div class="d-flex" id="title-mid-top-body" style="gap: 8px;">
+                            <div class="d-flex" style="gap: 4px;">
+                                <span class="title-hello">Chào Hoàng,</span>
+                                <img src="icon/image 1805.svg" width="32" height="32" />
+                            </div>
+                        </div>
 
+                        <div class="menu-future d-flex">
+                            <div class="menu-itemfuture d-flex align-items-center">
+                                <img class="item-image" src="icon/magic 1.svg" width="32" height="32" />
+                                <span class="text-future">Tìm kiếm với AI</span>
+                            </div>
 
-                                </div>
+                            <div class="menu-itemfuture d-flex align-items-center">
+                                <img class="item-image" src="icon/inbox 1.svg" width="32" height="32" />
+                                <span class="text-future">Tải tệp lên</span>
+                            </div>
 
-                                <div class="d-flex align-items-center" style="gap: 8px; height: 38px;">
-                                    <span
-                                        style="width: 87px; height: 17px; font-weight: 400; font-size: 14px; line-height: 16.94px; color: #1f1f1f;">Gợi
-                                        ý chủ đề:</span>
+                            <div class="menu-itemfuture d-flex align-items-center">
+                                <img class="item-image" src="icon/feather-pen 1.svg" width="32" height="32" />
+                                <span class="text-future">Viết nội dung</span>
+                            </div>
+
+                            <div class="menu-itemfuture d-flex align-items-center">
+                                <img class="item-image" src="icon/mandala 1.svg" width="32" height="32" />
+                                <span class="text-future">Sáng tạo nghệ thuật</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="messages" class="d-flex flex-column" style="gap: 24px;"></div>
+
+                    <div style="margin-top: 10px;">
+                        <div class="d-flex flex-column" class="mid-bottom-body">
+                            <div class="d-flex">
+                                <div class="scroll-container d-flex flex-column" style="gap: 8px;">
+                                    <div class="image-users d-flex" style="gap: 16px;">
+                                        <div><img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" /></div>
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                        <img class="item-image" src="icon/image 1801.svg" width="40" height="40" draggable="false" />
+                                    </div>
+
+                                    <div class="d-flex align-items-center" style="gap: 8px; height: 38px;">
+                                        <span class="title-topic">Gợi ý chủ đề:</span>
                                         <div class="owl-carousel">
                                             <div class="full-suggest d-flex">
                                                 <div class="items-suggest d-flex" style="gap: 8px;">
                                                     <div class="child-items-suggest d-flex align-items-center">
                                                         <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Du lịch</span>
+                                                        <span class="text-topic">Du lịch</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -172,7 +138,7 @@
                                                 <div class="items-suggest d-flex" style="gap: 8px;">
                                                     <div class="child-items-suggest d-flex align-items-center">
                                                         <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Ẩm thực</span>
+                                                        <span class="text-topic">Ẩm thực</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,7 +146,7 @@
                                                 <div class="items-suggest d-flex" style="gap: 8px;">
                                                     <div class="child-items-suggest d-flex align-items-center">
                                                         <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Công nghệ</span>
+                                                        <span class="text-topic">Công nghệ</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -188,7 +154,7 @@
                                                 <div class="items-suggest d-flex" style="gap: 8px;">
                                                     <div class="child-items-suggest d-flex align-items-center">
                                                         <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                        <span style="font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Thời trang</span>
+                                                        <span class="text-topic">Thời trang</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -196,1051 +162,760 @@
                                                 <div class="items-suggest d-flex" style="gap: 8px;">
                                                     <div class="child-items-suggest d-flex align-items-center">
                                                         <img src="icon/luggage 1.svg" width="20" height="20" />
-                                                        <span style=" font-weight: 400; font-size: 14px; line-height: 14.94px; color: #636363;">Thể thao</span>
+                                                        <span class="text-topic">Thể thao</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container">
-                            <span class="hover-text">/timlietsi</span>
-                            <span class="hover-text">/timnhanthan</span>
-                            <span class="hover-text">/timtrelac</span>
-                            <span class="hover-text">/timmolietsi</span>
-                            <span class="hover-text">/timdongdoithatlac</span>
-                        </div>
-                        
-                        
-                    </div>
-
-                    <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px;">
-                        <div class="contain-groupbtn-bdmid d-flex flex-column" style="gap: 16px; ">
-                            <div id="groupButton-body-mid" class="groupButton-body-mid d-flex">
-                                <div id="button-gr-body-mid-setting"
-                                    class="button-gr-body-mid d-flex align-items-center">
-                                    <img src="icon/Setting.svg" width="20" height="20" /><span
-                                        style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1f1f1f;">Cài
-                                        đặt</span>
-
-
-                                    <div class="menu-setting d-flex flex-column">
-                                        <div class="menu-dropdown d-flex flex-column" style="gap: 8px;">
-                                            <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Ngôn
-                                                ngữ phản hồi</span>
-                                            <div class="dropdown">
-                                                <button
-                                                    class="btn-dropdown d-flex align-items-center justify-content-between"
-                                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px;">Tiếng
-                                                        Việt</span>
-                                                    <img id="close-contribute" src="icon/Chevron Down.svg" width="20"
-                                                        height="20" />
-
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Tiếng Anh</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="btn-setting d-flex btn-share align-items-center" style="cursor: pointer;">
-                                            <img src="icon/fluent_share-28-filled.svg" width="20" height="20" />
-                                            <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Chia
-                                                sẻ cuộc trò chuyện</span>
-                                        </div>
-                                        <div class="btn-setting d-flex btn-magic align-items-center" style="cursor: pointer;">
-                                            <img src="icon/fa-solid_magic.svg" width="20" height="20" />
-                                            <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Cá
-                                                nhân hoá trợ lý AI</span>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-                                <div id="button-gr-body-mid-mngcontribute"
-                                    class="button-gr-body-mid d-flex align-items-center">
-                                    <img src="icon/Paper.svg" width="20" height="20" /><span
-                                        style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1f1f1f;">Quản
-                                        lý đóng góp</span>
-                                </div>
-                                <div id="button-gr-body-mid-contribute"
-                                    class="button-gr-body-mid d-flex align-items-center">
-                                    <img src="icon/Paper Plus.svg" width="20" height="20" /><span
-                                        style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1f1f1f;">Đóng
-                                        góp</span>
-                                    <div class="d-flex"
-                                        style="border-radius: 4px; padding: 2px 4px 2px 4px; gap: 10px; background: var(--Color-Red, #FF0E00);">
-                                        <span
-                                            style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #FFFFFF;">beta</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="manager-contribute d-flex flex-column" style="z-index: 99999;">
-                                <div class="d-flex" style="height: 45px; gap: 8px; width: 100%; align-items: center;">
-                                    <div class="d-flex justify-content-between" style="width: 100%;">
-                                        <img src="icon/Back Icon.svg" width="24" height="24" />
-                                        <div class="d-flex" style="gap: 10px;">
-                                            <span
-                                                style="font-weight: 600; font-size: 16px; line-height: 19.36px; color: #4284F3;">Danh
-                                                sách đóng góp</span>
+                            <div class="container">
+                                <span class="hover-text">/timlietsi</span>
+                                <span class="hover-text">/timnhanthan</span>
+                                <span class="hover-text">/timtrelac</span>
+                                <span class="hover-text">/timmolietsi</span>
+                                <span class="hover-text">/timdongdoithatlac</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column" id="mid-bottom-body" style="gap: 40px;">
+                            <div class="contain-groupbtn-bdmid d-flex flex-column" style="gap: 16px;">
+                                <div id="groupButton-body-mid" class="groupButton-body-mid d-flex">
+                                    <div id="button-gr-body-mid-setting" class="button-gr-body-mid d-flex align-items-center">
+                                        <img src="icon/Setting.svg" width="20" height="20" /><span class="text-group">Cài đặt</span>
+
+                                        <div class="menu-setting d-flex flex-column">
+                                            <div class="menu-dropdown d-flex flex-column" style="gap: 8px;">
+                                                <span class="text-group">Ngôn ngữ phản hồi</span>
+                                                <div class="dropdown">
+                                                    <button class="btn-dropdown d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <span class="text-group">Tiếng Việt</span>
+                                                        <img id="close-contribute" src="icon/Chevron Down.svg" width="20" height="20" />
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Tiếng Anh</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="btn-setting d-flex btn-share align-items-center" style="cursor: pointer;">
+                                                <img src="icon/fluent_share-28-filled.svg" width="20" height="20" />
+                                                <span class="text-group">Chia sẻ cuộc trò chuyện</span>
+                                            </div>
+                                            <div class="btn-setting d-flex btn-magic align-items-center" style="cursor: pointer;">
+                                                <img src="icon/fa-solid_magic.svg" width="20" height="20" />
+                                                <span class="text-group">Cá nhân hoá trợ lý AI</span>
+                                            </div>
                                         </div>
-                                        <img id="close-manager-contribute" style="cursor: pointer;"
-                                            src="icon/Close Icon Container.svg" width="24" height="24" />
                                     </div>
-                                </div>
-                                <div class="rectangle" style="border: 1px solid #CAD0D7;"></div>
-
-                                <div class="navbar-contribute d-flex align-items-center justify-content-between" style="gap: 8px;">
-                                    <span style="font-weight: 400; font-size: 14px; line-height: 16.94px;">Tổng số đóng
-                                        góp: <span style="font-weight: 600;">124</span> nội dung | <span
-                                            style="font-weight: 600;">84</span> hình ảnh | <span
-                                            style="font-weight: 600;">16</span> tệp</span>
-                                    <div class="btn-manager-contribute d-flex align-items-center"
-                                        style="cursor: pointer;">
-                                        <img src="icon/Paper Plus.svg" width="20" height="20" /><span
-                                            style="font-weight: 500; font-size: 14px; line-height: 16.94px; color: #1f1f1f;">Đóng
-                                            góp</span>
-                                        <div class="d-flex"
-                                            style="border-radius: 4px; padding: 2px 4px 2px 4px; gap: 10px; background: var(--Color-Red, #FF0E00);">
-                                            <span
-                                                style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #FFFFFF;">beta</span>
+                                    <div id="button-gr-body-mid-mngcontribute" class="button-gr-body-mid d-flex align-items-center"><img src="icon/Paper.svg" width="20" height="20" /><span class="text-group">Quản lý đóng góp</span></div>
+                                    <div id="button-gr-body-mid-contribute" class="button-gr-body-mid d-flex align-items-center">
+                                        <img src="icon/Paper Plus.svg" width="20" height="20" /><span class="text-group">Đóng góp</span>
+                                        <div class="btn-beta d-flex">
+                                            <span class="text-beta">beta</span>
                                         </div>
                                     </div>
                                 </div>
 
-
-
-                                <div class="tab-manager-contribute d-flex justify-content-between">
-                                    <div class="tab-mn tab-1mn d-flex flex-column tab-active" style="gap: 8px;">
-                                        <span
-                                            style="font-weight: 600; font-size: 14px; line-height: 16.94px; color: #4284F3;">Tất
-                                            cả (132)</span>
+                                <div class="manager-contribute d-flex flex-column" style="z-index: 99999;">
+                                    <div class="navbar-donggop d-flex">
+                                        <div class="d-flex justify-content-between" style="width: 100%;">
+                                            <img src="icon/Back Icon.svg" width="24" height="24" />
+                                            <div class="d-flex" style="gap: 10px;">
+                                                <span class="text-danhsachdonggop">Danh sách đóng góp</span>
+                                            </div>
+                                            <img id="close-manager-contribute" style="cursor: pointer;" src="icon/Close Icon Container.svg" width="24" height="24" />
+                                        </div>
                                     </div>
-                                    <div class="tab-mn tab-2mn d-flex flex-column" style="gap: 8px;">
-                                        <span
-                                            style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #636363;">Đã
-                                            duyệt (98)</span>
+                                    <div class="rectangle" style="border: 1px solid #cad0d7;"></div>
+
+                                    <div class="navbar-contribute d-flex align-items-center justify-content-between" style="gap: 8px;">
+                                        <span class="text-countcontribute">
+                                            Tổng số đóng góp: <span style="font-weight: 600;">124</span> nội dung | <span style="font-weight: 600;">84</span> hình ảnh | <span style="font-weight: 600;">16</span> tệp
+                                        </span>
+                                        <div class="btn-manager-contribute d-flex align-items-center" style="cursor: pointer;">
+                                            <img src="icon/Paper Plus.svg" width="20" height="20" /><span class="text-donggop">Đóng góp</span>
+                                            <div class="btn-beta d-flex">
+                                                <span class="text-beta">beta</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="tab-mn tab-3mn d-flex flex-column" style="gap: 8px;">
-                                        <span
-                                            style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #636363;">Chờ
-                                            duyệt (14)</span>
+
+                                    <div class="tab-manager-contribute d-flex justify-content-between">
+                                        <div class="tab-mn tab-1mn d-flex flex-column tab-active" style="gap: 8px;">
+                                            <span class="title-grcontribute">Tất cả (132)</span>
+                                        </div>
+                                        <div class="tab-mn tab-2mn d-flex flex-column" style="gap: 8px;">
+                                            <span class="title-grcontribute">Đã duyệt (98)</span>
+                                        </div>
+                                        <div class="tab-mn tab-3mn d-flex flex-column" style="gap: 8px;">
+                                            <span class="title-grcontribute">Chờ duyệt (14)</span>
+                                        </div>
+                                        <div class="tab-mn tab-4mn d-flex flex-column" style="gap: 8px;">
+                                            <span class="title-grcontribute">Từ chối (20)</span>
+                                        </div>
                                     </div>
-                                    <div class="tab-mn tab-4mn d-flex flex-column" style="gap: 8px;">
-                                        <span
-                                            style="font-weight: 400; font-size: 14px; line-height: 16.94px; color: #636363;">Từ
-                                            chối (20)</span>
-                                    </div>
-                                </div>
 
+                                    <div class="table-responsive">
+                                        <table id="dataTable" class="table align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="title-table-mrcontribute" scope="col">Ngày</th>
+                                                    <th class="title-table-mrcontribute" scope="col">Người đóng góp</th>
+                                                    <th class="title-table-mrcontribute" scope="col">Nội dung đóng góp</th>
+                                                    <th class="title-table-mrcontribute" scope="col">Trạng thái</th>
+                                                    <th class="title-table-mrcontribute" scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="text-center">
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusaccept d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Đã duyệt</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                <div class="table-responsive">
-                                    <table id="dataTable" class="table align-middle">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th style="font-size: 14px; font-weight: 600; text-align: center; line-height: 16.94px;"
-                                                    scope="col">Ngày</th>
-                                                <th style="font-size: 14px; font-weight: 600; text-align: center; line-height: 16.94px;"
-                                                    scope="col">Người đóng góp</th>
-                                                <th style="font-size: 14px; font-weight: 600; text-align: center; line-height: 16.94px;"
-                                                    scope="col">Nội dung đóng góp</th>
-                                                <th style="font-size: 14px; font-weight: 600; text-align: center; line-height: 16.94px;"
-                                                    scope="col">Trạng thái</th>
-                                                <th style="font-size: 14px; font-weight: 600; text-align: center; line-height: 16.94px;"
-                                                    scope="col"></th>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td class="box-text">
+                                                        <span class="ellipsis">
+                                                            Canvanex là một công cụ thiết kế đồ họa trực tuyến mạnh mẽ và dễ sử dụng, được thiết kế để giúp người dùng tạo ra các sản phẩm đồ họa chuyên nghiệp mà không cần có kiến thức sâu về
+                                                            thiết kế. Với giao diện thân thiện và trực quan, Canvanex cung cấp hàng ngàn mẫu thiết kế đa dạng, từ poster, banner, đến bài thuyết trình và bài đăng trên mạng xã hội. Người dùng
+                                                            có thể dễ dàng tùy chỉnh các mẫu này bằng cách kéo và thả các yếu tố thiết kế, thay đổi văn bản, màu sắc, và hình ảnh theo ý thích.
+                                                        </span>
+                                                        <!-- <span>abc</span> -->
+                                                    </td>
+                                                    <td>
+                                                        <div class="statuswaiting d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Chờ duyệt</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-center">
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px; position: relative;">
+                                                            <div class="d-flex flex-column align-items-center" style="gap: 8px;">
+                                                                <img src="icon/pdf 1.svg" width="40" height="40" />
+                                                                <span style="font-weight: 400; font-size: 12px; line-height: 14.52px;">Chứng nhận ĐKKD.pdf</span>
+                                                            </div>
 
+                                                            <div class="d-flex flex-column align-items-center" style="gap: 8px;">
+                                                                <img src="icon/pdf 1.svg" width="40" height="40" />
+                                                                <span style="font-weight: 400; font-size: 12px; line-height: 14.52px;">Chứng nhận ĐKKD.pdf</span>
+                                                            </div>
 
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
+                                                            <div class="d-flex flex-column align-items-center" style="gap: 8px;">
+                                                                <img src="icon/pdf 1.svg" width="40" height="40" />
+                                                                <span style="font-weight: 400; font-size: 12px; line-height: 14.52px;">Chứng nhận ĐKKD.pdf</span>
                                                             </div>
                                                         </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
                                                         </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
                                                         </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #28CD41;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Đã
-                                                            duyệt</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                </tr>
 
+                                                <!-- ok -->
 
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td class="box-text">
-                                                    <span class="ellipsis">Canvanex là một công cụ thiết kế đồ họa trực
-                                                        tuyến mạnh mẽ và dễ sử dụng, được thiết kế để giúp người dùng
-                                                        tạo ra các sản phẩm đồ họa chuyên nghiệp mà không cần có kiến
-                                                        thức sâu về thiết kế. Với giao diện thân thiện và trực quan,
-                                                        Canvanex cung cấp hàng ngàn mẫu thiết kế đa dạng, từ poster,
-                                                        banner, đến bài thuyết trình và bài đăng trên mạng xã hội. Người
-                                                        dùng có thể dễ dàng tùy chỉnh các mẫu này bằng cách kéo và thả
-                                                        các yếu tố thiết kế, thay đổi văn bản, màu sắc, và hình ảnh theo
-                                                        ý thích.</span>
-                                                    <!-- <span>abc</span> -->
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FFCC00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Chờ
-                                                            duyệt</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 80px;">
+                                                    <td class="text-days">
+                                                        21/05/2024
+                                                    </td>
+                                                    <td>
+                                                        <img src="icon/Ellipse 2655.svg" width="40" height="40" />
+                                                        <span class="text-fullname">Nguyễn Đức Quân</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 8px; position: relative;">
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                                <div class="image-migmore">
+                                                                    <img style="position: absolute;" src="icon/mingcute_more-1-fill.svg" width="16" height="16" />
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <img src="icon/Rectangle 849.svg" width="64" height="64" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="statusrefuse d-flex justify-content-center">
+                                                            <span class="text-status-contribute">Từ chối</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex" style="gap: 16px;">
+                                                            <img style="cursor: pointer;" src="icon/ci_note-edit.svg" width="20" height="20" />
+                                                            <img style="cursor: pointer;" src="icon/lucide_trash.svg" width="20" height="20" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- okk -->
+                                            </tbody>
+                                        </table>
 
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px; position: relative;">
-                                                        <div class="d-flex flex-column align-items-center"
-                                                            style="gap: 8px;">
-                                                            <img src="icon/pdf 1.svg" width="40" height="40" />
-                                                            <span
-                                                                style="font-weight: 400; font-size: 12px; line-height: 14.52px;">Chứng
-                                                                nhận ĐKKD.pdf</span>
-                                                        </div>
-
-                                                        <div class="d-flex flex-column align-items-center"
-                                                            style="gap: 8px;">
-                                                            <img src="icon/pdf 1.svg" width="40" height="40" />
-                                                            <span
-                                                                style="font-weight: 400; font-size: 12px; line-height: 14.52px;">Chứng
-                                                                nhận ĐKKD.pdf</span>
-                                                        </div>
-
-                                                        <div class="d-flex flex-column align-items-center"
-                                                            style="gap: 8px;">
-                                                            <img src="icon/pdf 1.svg" width="40" height="40" />
-                                                            <span
-                                                                style="font-weight: 400; font-size: 12px; line-height: 14.52px;">Chứng
-                                                                nhận ĐKKD.pdf</span>
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                            <!-- ok -->
-
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 80px;">
-                                                <td
-                                                    style="font-size: 14px; font-weight: 400; line-height: 16.94px; text-align: center;">
-                                                    21/05/2024</td>
-                                                <td>
-                                                    <img src="icon/Ellipse 2655.svg" width="40" height="40" />
-                                                    <span
-                                                        style="font-weight: 400; font-size: 14px; line-height: 16.94px; text-align: center;">Nguyễn
-                                                        Đức Quân</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 8px; position: relative;">
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                            <div
-                                                                style="position: absolute; margin-left: 2.8rem; margin-top: 0.25rem;">
-                                                                <img style="position: absolute;"
-                                                                    src="icon/mingcute_more-1-fill.svg" width="16"
-                                                                    height="16" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <img src="icon/Rectangle 849.svg" width="64" height="64" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex justify-content-center"
-                                                        style="border-radius: 4px; padding: 2px 12px 2px 12px; gap: 10px; background-color: #FF0E00;">
-                                                        <span
-                                                            style="font-size: 12px; font-weight: 400; line-height: 14.52px; color: #FFFFFF;">Từ
-                                                            chối</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex" style="gap: 16px;">
-                                                        <img style="cursor: pointer;" src="icon/ci_note-edit.svg"
-                                                            width="20" height="20" />
-                                                        <img style="cursor: pointer;" src="icon/lucide_trash.svg"
-                                                            width="20" height="20" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- okk -->
-                                        </tbody>
-                                    </table>
-
-
-
-                                    <div class="d-flex justify-content-between"
-                                        style="padding: 16px; background-color: #FFFFFF;">
-                                        <span
-                                            style="font-weight: 400; font-size: 12px; line-height: 14.52px; text-align: center;">Hiển
-                                            thị <span id="count-item-perpage"
-                                                style="font-weight: 700; font-size: 12px; line-height: 16px; text-align: center;">20</span>
-                                            trên <span id="sumcountItem"
-                                                style="font-weight: 700; font-size: 12px; line-height: 16px; text-align: center;">1.024</span>
-                                            kết quả</span>
-                                        <div>
+                                        <div class="footercontribute d-flex justify-content-between">
+                                            <span class="text-hienthi">Hiển thị <span class="text-count" id="count-item-perpage">20</span> trên <span class="text-count" id="sumcountItem">1.024</span> kết quả</span>
                                             <div>
-                                                <div class="d-flex align-items-center" style="gap: 24px;">
-                                                    <div class="col">
-                                                        <select id="itemsPerPage" class="form-select-items"
-                                                            onchange="updateItemsPerPage()">
-                                                            <option value="5">5</option>
-                                                            <option value="10" selected>10</option>
-                                                            <option value="15">15</option>
-                                                            <option value="20">20</option>
-                                                        </select>
+                                                <div>
+                                                    <div class="d-flex align-items-center" style="gap: 24px;">
+                                                        <div class="col">
+                                                            <select id="itemsPerPage" class="form-select-items" onchange="updateItemsPerPage()">
+                                                                <option value="5">5</option>
+                                                                <option value="10" selected>10</option>
+                                                                <option value="15">15</option>
+                                                                <option value="20">20</option>
+                                                            </select>
+                                                        </div>
+                                                        <nav>
+                                                            <ul id="pagination" class="pagination justify-content-center align-items-center">
+                                                                <li class="page-item">
+                                                                    <button class="btn-pagination d-flex align-items-center justify-content-center" id="prev" onclick="prevPage()">
+                                                                        <img style="cursor: pointer;" src="icon/Chevron Left.svg" width="20" height="20" />
+                                                                    </button>
+                                                                </li>
+                                                                <li class="page-item"><span id="pageNumbers" class="pagination"></span></li>
+                                                                <li class="page-item">
+                                                                    <button class="btn-pagination d-flex align-items-center justify-content-center" id="next" onclick="nextPage()">
+                                                                        <img style="cursor: pointer; transform: rotate(180deg);" src="icon/Chevron Left.svg" width="20" height="20" />
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
                                                     </div>
-                                                    <nav>
-                                                        <ul id="pagination"
-                                                            class="pagination justify-content-center align-items-center"
-                                                            style="margin: 0; gap: 8px;">
-                                                            <li class="page-item">
-                                                                <button
-                                                                    class="d-flex align-items-center justify-content-center"
-                                                                    style="border: none; background-color: #FFFFFF; padding: 0; width: 24px; height: 24px;"
-                                                                    id="prev" onclick="prevPage()">
-                                                                    <img style="cursor: pointer;"
-                                                                        src="icon/Chevron Left.svg" width="20"
-                                                                        height="20" />
-                                                                </button>
-                                                            </li>
-                                                            <li class="page-item"><span id="pageNumbers"
-                                                                    class="pagination"></span></li>
-                                                            <li class="page-item">
-                                                                <button
-                                                                    class="d-flex align-items-center justify-content-center"
-                                                                    style="border: none; background-color: #FFFFFF; padding: 0; width: 24px; height: 24px;"
-                                                                    id="next" onclick="nextPage()">
-                                                                    <img style="cursor: pointer; transform: rotate(180deg);"
-                                                                        src="icon/Chevron Left.svg" width="20"
-                                                                        height="20" />
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
 
-                                                <div id="gotoPageModal" class="modal" tabindex="-1">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title">Go to Page</h5>
-                                                                <button type="button" class="btn-close"
-                                                                    onclick="closeGotoPageModal()"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <input type="number" id="gotoPage" class="form-control"
-                                                                    placeholder="Enter page number" min="1">
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-primary"
-                                                                    onclick="goToPageNumber()">Go</button>
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    onclick="closeGotoPageModal()">Close</button>
+                                                    <div id="gotoPageModal" class="modal" tabindex="-1">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Go to Page</h5>
+                                                                    <button type="button" class="btn-close" onclick="closeGotoPageModal()"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <input type="number" id="gotoPage" class="form-control" placeholder="Enter page number" min="1" />
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-primary" onclick="goToPageNumber()">Go</button>
+                                                                    <button type="button" class="btn btn-secondary" onclick="closeGotoPageModal()">Close</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1249,233 +924,198 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="contribute d-flex justify-content-center flex-column" style="z-index: 99999;">
+                                    <div class="d-flex align-items-center" style="gap: 16px; width: 100%;">
+                                        <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+                                            <div class="d-flex justify-content-center" style="gap: 10px; padding: 0 0 0 24px; width: 100%;">
+                                                <span class="text-btndonggop">Đóng góp</span>
+                                            </div>
+                                            <img id="close-contributes" src="icon/Group 81344.svg" width="24" height="24" style="cursor: pointer;" />
+                                        </div>
+                                    </div>
+
+                                    <div class="rectangle" style="border: 1px solid #ecf0f1;"></div>
+
+                                    <div class="textbox-content d-flex flex-column" style="gap: 8px;">
+                                        <span class="title-grdonggop">Nội dung</span>
+                                        <textarea id="textbox-contribute" placeholder="Nhập nội dung"></textarea>
+                                    </div>
+
+                                    <div class="textbox-image d-flex flex-column" style="gap: 8px;">
+                                        <span class="title-grdonggop" class="title-grdonggop">Hình ảnh</span>
+                                        <div class="d-flex" style="gap: 8px;">
+                                            <div class="box" onclick="uploadImage(0)">
+                                                <img src="icon/Add.svg" alt="Upload" class="icon" />
+                                                <input type="file" class="file-input" onchange="previewImage(event, 0)" />
+                                            </div>
+                                            <div class="box" onclick="uploadImage(1)">
+                                                <img src="icon/Add.svg" alt="Upload" class="icon" />
+                                                <input type="file" class="file-input" onchange="previewImage(event, 1)" />
+                                            </div>
+                                            <div class="box" onclick="uploadImage(2)">
+                                                <img src="icon/Add.svg" alt="Upload" class="icon" />
+                                                <input type="file" class="file-input" onchange="previewImage(event, 2)" />
+                                            </div>
+                                            <div class="box" onclick="uploadImage(3)">
+                                                <img src="icon/Add.svg" alt="Upload" class="icon" />
+                                                <input type="file" class="file-input" onchange="previewImage(event, 3)" />
+                                            </div>
+                                            <div class="box" onclick="uploadImage(4)">
+                                                <img src="icon/Add.svg" alt="Upload" class="icon" />
+                                                <input type="file" class="file-input" onchange="previewImage(event, 4)" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-center" style="gap: 8px;">
+                                        <span class="title-grdonggop">Tệp</span>
+                                        <div class="body-upload-file d-flex align-items-center flex-column" id="upload-container">
+                                            <img src="icon/Paper Upload.svg" width="40" height="40" />
+
+                                            <input type="file" id="file-upload" />
+                                            <div class="d-flex flex-column align-items-center" style="gap: 8px;">
+                                                <span class="text-thatep">Bấm hoặc kéo thả tệp vào đây để tải lên</span>
+                                                <span class="text-dinhdang">Hỗ trợ định dạng: PNG, JPG, PDF, DOC, XLSX, TXT...</span>
+                                                <span class="text-dinhdang">Dung lượng tối đa: 200MB</span>
+                                            </div>
+                                        </div>
+
+                                        <div id="file-name" class="file-name"></div>
+                                        <div id="error-message" class="error-message"></div>
+                                    </div>
+                                    <button class="btn-xacnhan-contribute">Xác nhận</button>
+                                </div>
+
+                                <div class="chat-container">
+                                    <div class="d-flex justify-content-between" style="position: relative;">
+                                        <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm" id="text-box-midBody" class="d-flex">/canvanex</textarea>
+                                        <div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
+                                            <a href="javascript:void(0);" onclick="sendText()">
+                                                <img src="icon/mingcute_send-line.svg" width="20" height="20" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-
-                            <div class="contribute d-flex justify-content-center flex-column" style="z-index: 99999;">
-
-                                <div class="d-flex align-items-center" style="gap: 16px; width: 100%; ">
-                                    <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
-
-                                        <div class="d-flex justify-content-center"
-                                            style="gap: 10px; padding: 0 0 0 24px; width: 100%;">
-                                            <span
-                                                style="font-weight: 600; font-size: 18px; line-height: 21.78px; color: #4284F3;">Đóng
-                                                góp</span>
-                                        </div>
-                                        <img id="close-contributes" src="icon/Group 81344.svg" width="24" height="24"
-                                            style="cursor: pointer;" />
-                                    </div>
-                                </div>
-
-                                <div class="rectangle" style="border: 1px solid #ECF0F1;"></div>
-
-                                <div class="textbox-content d-flex flex-column" style="gap: 8px;">
-                                    <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Nội
-                                        dung</span>
-                                    <textarea id="textbox-contribute" placeholder="Nhập nội dung"></textarea>
-                                </div>
-
-                                <div class="textbox-image d-flex flex-column" style="gap: 8px;">
-                                    <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Hình
-                                        ảnh</span>
-                                    <div class="d-flex" style="gap: 8px;">
-
-                                        <div class="box" onclick="uploadImage(0)">
-                                            <img src="icon/Add.svg" alt="Upload" class="icon">
-                                            <input type="file" class="file-input" onchange="previewImage(event, 0)">
-                                        </div>
-                                        <div class="box" onclick="uploadImage(1)">
-                                            <img src="icon/Add.svg" alt="Upload" class="icon">
-                                            <input type="file" class="file-input" onchange="previewImage(event, 1)">
-                                        </div>
-                                        <div class="box" onclick="uploadImage(2)">
-                                            <img src="icon/Add.svg" alt="Upload" class="icon">
-                                            <input type="file" class="file-input" onchange="previewImage(event, 2)">
-                                        </div>
-                                        <div class="box" onclick="uploadImage(3)">
-                                            <img src="icon/Add.svg" alt="Upload" class="icon">
-                                            <input type="file" class="file-input" onchange="previewImage(event, 3)">
-                                        </div>
-                                        <div class="box" onclick="uploadImage(4)">
-                                            <img src="icon/Add.svg" alt="Upload" class="icon">
-                                            <input type="file" class="file-input" onchange="previewImage(event, 4)">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-column justify-content-center" style="gap: 8px;">
-                                    <span style="font-weight: 500; font-size: 14px; line-height: 16.94px;">Tệp</span>
-                                    <div class="body-upload-file d-flex align-items-center flex-column"
-                                        id="upload-container">
-                                        <img src="icon/Paper Upload.svg" width="40" height="40" />
-
-                                        <input type="file" id="file-upload">
-                                        <div class="d-flex flex-column align-items-center" style="gap: 8px;">
-                                            <span style="font-weight: 600; font-size: 14px; line-height: 16.94px;">Bấm
-                                                hoặc kéo thả tệp vào đây để tải lên</span>
-                                            <span
-                                                style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #636363;">Hỗ
-                                                trợ định dạng: PNG, JPG, PDF, DOC, XLSX, TXT...</span>
-                                            <span
-                                                style="font-weight: 400; font-size: 12px; line-height: 14.52px; color: #636363;">Dung
-                                                lượng tối đa: 200MB</span>
-                                        </div>
-
-                                    </div>
-
-                                    <div id="file-name" class="file-name"></div>
-                                    <div id="error-message" class="error-message"></div>
-                                </div>
-                                <button class="btn-xacnhan-contribute">Xác nhận</button>
-                            </div>
-
-                                <div class="d-flex justify-content-between" style="position: relative;">
-                                    <textarea placeholder="Nhập từ khóa hoặc nhấn '/' để bắt đầu tìm kiếm"
-                                        id="text-box-midBody" class="d-flex">/canvanex</textarea>
-                                    <div class="d-flex" style="position: absolute; bottom: 10px; right: 10px; gap: 10px;">
-                                        <a href="#"><img src="icon/mingcute_send-line.svg" width="20" height="20" /></a>
-                                    </div>
-                                </div>
-
-                                <div class="output" id="output"></div>
-
                         </div>
                     </div>
-
                 </div>
-
-
-
             </div>
-
-
-
+            <!-- end-body-main -->
         </div>
-        <!-- end-body-main -->
 
+        <script>
+            const container = document.querySelector(".scroll-container");
+            const items = document.querySelector(".image-users");
+            let isDragging = false;
+            let draggedElement = null;
+            let startX, scrollLeft, currentX;
 
-    </div>
-
-    <script>
- const container = document.querySelector('.scroll-container');
-const items = document.querySelector('.image-users');
-let isDragging = false;
-let draggedElement = null;
-let startX, scrollLeft, currentX;
-
-// Ngăn chặn hành động kéo mặc định của ảnh trong items và full-suggest
-const draggableElements = document.querySelectorAll('.item-image');
-draggableElements.forEach(el => {
-    if (el.tagName.toLowerCase() === 'img') {
-        el.setAttribute('draggable', false);
-    }
-    el.addEventListener('dragstart', (e) => e.preventDefault());
-});
-
-const startDragging = (e) => {
-    isDragging = true;
-    startX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
-    draggedElement = e.target.closest('.image-users');
-    if (draggedElement) {
-        const transformValue = draggedElement.style.transform;
-        scrollLeft = transformValue ? parseFloat(transformValue.split('(')[1].split(',')[0]) : 0;
-    }
-};
-
-const stopDragging = () => {
-    if (isDragging) {
-        isDragging = false;
-        constrainPosition();
-    }
-};
-
-const onDragging = (e) => {
-    if (!isDragging || !draggedElement) return;
-    e.preventDefault();
-    currentX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
-    const walk = (currentX - startX) * 1; // Số lượng kéo
-    draggedElement.style.transform = `translate3d(${scrollLeft + walk}px, 0, 0)`;
-};
-
-container.addEventListener('mousedown', startDragging);
-container.addEventListener('touchstart', startDragging);
-
-container.addEventListener('mouseleave', stopDragging);
-container.addEventListener('mouseup', stopDragging);
-container.addEventListener('touchend', stopDragging);
-
-container.addEventListener('mousemove', onDragging);
-container.addEventListener('touchmove', onDragging);
-
-function constrainPosition() {
-    if (!draggedElement) return;
-
-    // Tính toán giá trị dịch chuyển
-    let transformValue = draggedElement.style.transform;
-    let translateX = transformValue ? parseFloat(transformValue.split('(')[1].split(',')[0]) : 0;
-    const maxTranslateX = -(draggedElement.scrollWidth - container.offsetWidth);
-
-    // Giới hạn giá trị dịch chuyển
-    if (translateX > 0) {
-        translateX = 0;
-    } else if (translateX < maxTranslateX) {
-        translateX = maxTranslateX;
-    }
-
-    draggedElement.style.transform = `translate3d(${translateX}px, 0, 0)`;
-}
-
-
-
-
-
-    </script>
-
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<!-- Khởi tạo Owl Carousel -->
-<script>
-    $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                margin: 8,
-                autoWidth: true,
-                autoplaySpeed: 800,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
-                },
-                smartSpeed: 600,
-                responsiveRefreshRate: 100,
-            });
-
-            // Xử lý khoảng trắng dư thừa
-            $(".owl-carousel").on('translated.owl.carousel', function(event) {
-                var owlStage = $('.owl-stage');
-                var owlStageWidth = owlStage.width();
-                var owlCarouselWidth = $('.owl-carousel').width();
-
-                if (owlStageWidth < owlCarouselWidth) {
-                    owlStage.css('width', owlCarouselWidth + 'px');
+            // Ngăn chặn hành động kéo mặc định của ảnh trong items và full-suggest
+            const draggableElements = document.querySelectorAll(".item-image");
+            draggableElements.forEach((el) => {
+                if (el.tagName.toLowerCase() === "img") {
+                    el.setAttribute("draggable", false);
                 }
+                el.addEventListener("dragstart", (e) => e.preventDefault());
             });
-        });
 
-</script>
+            const startDragging = (e) => {
+                isDragging = true;
+                startX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
+                draggedElement = e.target.closest(".image-users");
+                if (draggedElement) {
+                    const transformValue = draggedElement.style.transform;
+                    scrollLeft = transformValue ? parseFloat(transformValue.split("(")[1].split(",")[0]) : 0;
+                }
+            };
 
+            const stopDragging = () => {
+                if (isDragging) {
+                    isDragging = false;
+                    constrainPosition();
+                }
+            };
 
-    <script src="js/scripts.js"></script>
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="js/bootstrap.bundle.js"></script>
-</body>
+            const onDragging = (e) => {
+                if (!isDragging || !draggedElement) return;
+                e.preventDefault();
+                currentX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
+                const walk = (currentX - startX) * 1; // Số lượng kéo
+                draggedElement.style.transform = `translate3d(${scrollLeft + walk}px, 0, 0)`;
+            };
 
+            container.addEventListener("mousedown", startDragging);
+            container.addEventListener("touchstart", startDragging);
+
+            container.addEventListener("mouseleave", stopDragging);
+            container.addEventListener("mouseup", stopDragging);
+            container.addEventListener("touchend", stopDragging);
+
+            container.addEventListener("mousemove", onDragging);
+            container.addEventListener("touchmove", onDragging);
+
+            function constrainPosition() {
+                if (!draggedElement) return;
+
+                // Tính toán giá trị dịch chuyển
+                let transformValue = draggedElement.style.transform;
+                let translateX = transformValue ? parseFloat(transformValue.split("(")[1].split(",")[0]) : 0;
+                const maxTranslateX = -(draggedElement.scrollWidth - container.offsetWidth);
+
+                // Giới hạn giá trị dịch chuyển
+                if (translateX > 0) {
+                    translateX = 0;
+                } else if (translateX < maxTranslateX) {
+                    translateX = maxTranslateX;
+                }
+
+                draggedElement.style.transform = `translate3d(${translateX}px, 0, 0)`;
+            }
+        </script>
+
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <!-- Khởi tạo Owl Carousel -->
+        <script>
+            $(document).ready(function () {
+                $(".owl-carousel").owlCarousel({
+                    margin: 8,
+                    autoWidth: true,
+                    autoplaySpeed: 800,
+                    responsive: {
+                        0: {
+                            items: 1,
+                        },
+                        600: {
+                            items: 2,
+                        },
+                        1000: {
+                            items: 3,
+                        },
+                    },
+                    smartSpeed: 600,
+                    responsiveRefreshRate: 100,
+                });
+
+                // Xử lý khoảng trắng dư thừa
+                $(".owl-carousel").on("translated.owl.carousel", function (event) {
+                    var owlStage = $(".owl-stage");
+                    var owlStageWidth = owlStage.width();
+                    var owlCarouselWidth = $(".owl-carousel").width();
+
+                    if (owlStageWidth < owlCarouselWidth) {
+                        owlStage.css("width", owlCarouselWidth + "px");
+                    }
+                });
+            });
+        </script>
+
+        <script src="js/scripts.js"></script>
+        <!-- Bootstrap JS Bundle with Popper -->
+        <script src="js/bootstrap.bundle.js"></script>
+    </body>
 </html>
